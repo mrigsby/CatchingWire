@@ -4,6 +4,7 @@
     "author":"You",
     "location":"forgeboxStorage",
     "slug":"catchingwire",
+    "directory":"wwwroot",
     "createPackageDirectory":false,
     "type":"mvc",
     "keywords":"",
@@ -36,7 +37,7 @@
         "cbmailservices":"modules/cbmailservices/",
         "cbvalidation":"modules/cbvalidation/",
         "cbdebugger":"modules/cbdebugger/",
-        "mementifier":"modules/mementifier/"
+        "mementifier":"modules/mementifier/",
     },
     "dependencies":{
         "coldbox":"~7",
@@ -48,6 +49,6 @@
         "ColdThumbs":"^2.2.0",
         "cbmailservices":"^2.8.0+1",
         "cbvalidation":"^4.5.0+27",
-        "mementifier":"^3"
+        "mementifier":"^3",
     }
 }

@@ -2,9 +2,10 @@
     "name":"catchingWire",
     "app":{
         "cfengine":"lucee@5",
-        "libDirs":"../DB/jars/"
+        "libDirs":"./DB/jars/"
     },
     "web":{
+        "webroot":"./wwwroot",
         "rewrites":{
             "enable":"true"
         },

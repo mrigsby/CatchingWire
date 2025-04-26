@@ -16,23 +16,11 @@ This repository contains a the CBWire demos used for this presentation and more.
 
 ## Setup of Demo
 
-### 1. Install Coldbox Dependencies
+### 1. Environment Variables
 
-change into the `demo` folder, start commandbox and install dependencies
+Copy `.env.example` to `.env` in the root of the repository
 
-```bash
-cd demo
-box
-install
-```
-
-### 2. Environment Variables
-
-Rename `.env.example` to `.env`
-
-`cp .env.example .env`
-
-There are not any environment variable that **must** be changed when copying `.env.example` to `.env`, However there are a few optional values you might want to change as well. Setting the `DEMO_USER_*` values will allow ColdBox to reset the primary demo user on appinit
+There are **not** any environment variables that need to be changed when copying `.env.example` to `.env`, However there are a few optional values you might want to change. Setting the `DEMO_USER_*` values will allow ColdBox to reset the primary demo user on every appinit
 
 ```
 # Demo User (ID=1) Info (will be reset on appinit. Remove or set to blank to disable)
@@ -41,6 +29,27 @@ DEMO_USER_PASSWORD=password
 DEMO_USER_FIRST_NAME=Jonathon 
 DEMO_USER_LAST_NAME=Deauxville
 DEMO_USER_TITLE=Baron
+```
+
+### 2. Start CommandBox and install ColdBox dependencies
+
+start CommandBox in the root of the repository
+
+```bash
+box
+```
+
+change into the `wwwroot` folder and install dependencies
+
+```bash
+cd wwwroot
+install
+```
+
+go back to root of repository
+
+```bash
+cd ..
 ```
 
 ### 3. Start the Server
