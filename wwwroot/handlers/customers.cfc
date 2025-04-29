@@ -17,13 +17,16 @@ component extends="coldbox.system.EventHandler" secured {
 			.orderBy( "fname", rc.sort )
 			.paginate( rc.page );
 
-		prc.layoutMeta = { pageTitle : "All Customers", breadCrumbs : [
-			{ Title : "Dashboard", Link : "/" },
-			{ Title : "Customers", active : true }
-		] };
+		prc.layoutDetails.append({
+			pageTitle : "All Customers", 
+			main_menu_active : "customers",
+			breadCrumbs : [
+				{ Title : "Dashboard", Link : "/" },
+				{ Title : "Customers", active : true }
+			]
+		} ,true );
 		event.setView( "customers/allCustomers" );
 	}
-
 
 	function editCustomer( event, rc, prc ){
 		prc.oUser = getInstance( "User" )
@@ -31,11 +34,15 @@ component extends="coldbox.system.EventHandler" secured {
 			.firstOrFail();
 		prc.CustomerFullName = prc.oUser.getFName() & " " & prc.oUser.getLName();
 
-		prc.layoutMeta = { pageTitle : "Edit " & prc.CustomerFullName, breadCrumbs : [
-			{ Title : "Dashboard", Link : "/" },
-			{ Title : "Customers", Link : "/customers" },
-			{ Title : "Edit " & prc.CustomerFullName, active : true }
-		] };
+		prc.layoutDetails.append({
+			pageTitle : "Edit " & prc.CustomerFullName, 
+			main_menu_active : "customers",
+			breadCrumbs : [
+				{ Title : "Dashboard", Link : "/" },
+				{ Title : "Customers", Link : "/customers" },
+				{ Title : "Edit " & prc.CustomerFullName, active : true }
+			]
+		} ,true );
 		event.setView( "customers/editCustomer" );
 	}
 
@@ -52,7 +59,6 @@ component extends="coldbox.system.EventHandler" secured {
 
 		return { "success" : true, "message" : "Customer updated successfully!" };
 	}
-
 
 	function changePassword( event, rc, prc ){
 		param rc.currentPassword="";

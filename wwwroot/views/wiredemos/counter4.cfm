@@ -79,6 +79,7 @@
 	#view(
 		"wiredemos/showCode",
 		{
+			"codeIntro" : "/views/wiredemos/partials/codeIntro-counter4.cfm",
 			"files" : [
 				"/views/wiredemos/Counter4.cfm",
 				"/wires/Counter4.cfc",

@@ -35,7 +35,7 @@
 			<!---begin::App Main--->
 			<main class="app-main">
 
-				<cfif prc.keyExists("layoutMeta") AND prc.layoutMeta.keyExists("pageTitle") >
+				<cfif prc.keyExists("layoutDetails") AND prc.layoutDetails.keyExists("pageTitle") >
 					<!---begin::App Content Header--->
 					<div class="app-content-header">
 						<cfinclude template="partials/pageBreadcrumbBar.cfm" />

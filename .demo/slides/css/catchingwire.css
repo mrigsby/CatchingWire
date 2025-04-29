@@ -3,7 +3,7 @@
 	/* Set some variables */
 	--demotime-color: #75fb85;
 	--demotime-secondary-color: #01dbff;
-
+	--cbwire-gold: #f6d02f;
 	background: url( "../images/background.jpg" ) no-repeat center center fixed !important;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -13,6 +13,10 @@
 	font-size: var(--demotime-font-size);
 	font-family: "Poppins", sans-serif;
 	color: var(--demotime-color);
+
+	.text-cbwire {
+		color: var(--cbwire-gold);
+	}
 
 	.slide_logo_small {
 		position: absolute;
@@ -32,7 +36,7 @@
 	}
 	h1.slide_title {
 		font-size: 55px;
-		color: var(--demotime-color);
+		color: var(--cbwire-gold);
 		display: block;
 		padding: 0.25em;
 		margin-bottom: 0.5em;
@@ -42,7 +46,7 @@
 	h1 {
 		font-size: 34px;
 		font-weight: bold;
-		color: var(--demotime-color);
+		color: var(--cbwire-gold);
 		display: block;
 		padding: 0.25em;
 		position: relative;

@@ -6,6 +6,7 @@
 	#view(
 		"wiredemos/showCode",
 		{
+			"codeIntro" : "/views/wiredemos/partials/codeIntro-customerTable.cfm",
 			"files" : [
 				"/views/wiredemos/customerTable.cfm",
 				"/wires/customerTable.cfc",

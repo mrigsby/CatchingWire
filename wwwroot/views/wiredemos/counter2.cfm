@@ -6,6 +6,7 @@
 	#view(
 		"wiredemos/showCode",
 		{
+			"codeIntro" : "/views/wiredemos/partials/codeIntro-counter2.cfm",
 			"files" : [
 				"/views/wiredemos/Counter2.cfm",
 				"/wires/Counter2.cfc",

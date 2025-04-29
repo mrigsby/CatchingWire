@@ -2,8 +2,11 @@
 	{{#if metadata.logo-small}}
 		<div class="slide_logo_small"></div>
 	{{/if}}
-	{{#if metadata.title}}<h1 class="slide_title poppins-bold">{{metadata.title}}</h1>{{/if}}
+	<h1 class="slide_title " style="text-align: center; display: block;">
+		{{#if metadata.title}}{{metadata.title}}{{else}}Catching 🔥 Wire{{/if}}
+	</h1>
 	<div class="slide_content">
+
 		{{{content}}}
 	</div>
 	<footer class="slide_footer">

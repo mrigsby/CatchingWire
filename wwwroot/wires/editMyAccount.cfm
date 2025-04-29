@@ -7,23 +7,6 @@
 
 			<form novalidate="" name="frmMyAccount" id="frmMyAccount" wire:submit="saveAccount">
 				<div class="card-body">
-					<!--- Display any errors or success messages --->
-					<cfif data.saveAccountError.len()>
-						<div class="alert alert-danger alert-dismissible fade show" role="alert">
-							<cfloop index="currentErrorIndex" item="currentError" array="#data.saveAccountError#">
-								#currentError#<br>
-							</cfloop>
-							<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-						</div>
-						<cfset data.saveAccountError = []/>
-					<cfelseif data.saveAccountSuccess >
-						<div class="alert alert-success alert-dismissible fade show" role="alert">
-							Your account has been updated successfully.
-							<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-						</div>
-						<cfset data.saveAccountSuccess = false />
-					</cfif>
-
 					<div class="row g-3">
 						<div class="col-md-6">
 							<label for="fname" class="form-label">First name</label>
@@ -57,22 +40,6 @@
 
 			<form novalidate="" name="frmChangePassword" id="frmChangePassword" wire:submit="changePassword">
 				<div class="card-body">
-					<cfif data.changePasswordError.len()>
-						<div class="alert alert-danger alert-dismissible fade show" role="alert">
-							<cfloop index="currentErrorIndex" item="currentError" array="#data.changePasswordError#">
-								#currentError#<br>
-							</cfloop>
-							<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-						</div>
-						<cfset data.changePasswordError = []/>
-					</cfif>
-					<cfif data.changePasswordSuccess >
-						<div class="alert alert-success alert-dismissible fade show" role="alert">
-							Password changed successfully.
-							<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-						</div>
-						<cfset data.changePasswordSuccess = false />
-					</cfif>
 
 					<div class="row g-3">
 						<div class="col-md-6">

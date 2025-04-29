@@ -43,7 +43,4 @@
 
 		});  // onready
 	</script>
-
-
-
 </cfoutput>

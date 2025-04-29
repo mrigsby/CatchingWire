@@ -1,0 +1,32 @@
+{
+	"$schema": "https://demotime.elio.dev/demo-time.schema.json",
+	"title": "05. Edit My Account",
+	"description": "",
+	"demos": [
+		{
+			"title": "Introduction",
+			"steps": [
+				{ "action": "openSlide", "path": ".demo/slides/05-01.md" }
+			]
+		},
+		{
+			"title": "Open Demo URL",
+			"steps": [
+				{ "action": "openWebsite", "url": "http://127.0.0.1:8112/wiredemos/editMyAccount", "openInVSCode": false }
+			]
+		},
+		{
+			"title": "Open Component (Model)",
+			"steps": [
+				{ "action": "highlight", "path": "wwwroot/wires/editMyAccount.cfc", "position": "1:84" }
+			]
+		},
+		{
+			"title": "Open Template (View)",
+			"steps": [
+				{ "action": "highlight", "path": "wwwroot/wires/editMyAccount.cfm", "position": "1:97" }
+			]
+		},
+
+	]
+}

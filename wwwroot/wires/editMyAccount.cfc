@@ -6,10 +6,6 @@ component extends="cbwire.models.Component" {
 		"currentPasswordConfirm" : "",
 		"newPassword"            : "",
 		"newPasswordConfirm"     : "",
-		"changePasswordError"    : [],
-		"changePasswordSuccess"  : false,
-		"saveAccountError"       : [],
-		"saveAccountSuccess"     : false,
 		"id"                     : "",
 		"fname"                  : "",
 		"lname"                  : "",
@@ -23,53 +19,48 @@ component extends="cbwire.models.Component" {
 	locked = [ "id", "email" ];
 
 	function saveAccount(){
-		data.saveAccountSuccess = false;
-		var oUser               = cbSecurity.getUser();
+		var oUser = cbSecurity.getUser();
 		if ( oUser.getId() == data.id ) {
 			oUser
 				.setFname( data.fname )
 				.setLname( data.lname )
 				.setTitle( data.title )
 				.save();
-			data.saveAccountSuccess = true;
+			js('Swal.fire({ position: "top-end", icon: "success", title: "Account Saved!", showConfirmButton: false, timer: 3000 })');
 		} else {
-			data.saveAccountError.append( "User ID mismatch!" );
+			js('Swal.fire({ title: "Error", html: "User ID mismatch", icon: "error" });');
 		}
 	}
 
 	function changePassword(){
-		data.append(
-			{
-				"changePasswordSuccess" : false,
-				"changePasswordError"   : []
-			},
-			true
-		);
+		var changePasswordError = [];
 		if ( data.newPassword != data.newPasswordConfirm )
-			data.changePasswordError.append( "The new password and confirmation do not match." );
+			changePasswordError.append( "The new password and confirmation do not match." );
 		if ( len( data.newPassword ) < 8 )
-			data.changePasswordError.append( "The new password must be at least 8 characters long. #len( data.newPassword )#" );
+			changePasswordError.append( "The new password must be at least 8 characters long." );
 		if ( !len( data.currentPasswordConfirm ) )
-			data.changePasswordError.append( "The current password is required." );
-		if ( data.changePasswordError.len() ) return;
+			changePasswordError.append( "The current password is required." );
+		if ( changePasswordError.len() ){
+			js('Swal.fire({ title: "Errors", html: "#changePasswordError.toList("<br>")#", icon: "error" });');
+			return;
+		};
 
 		try {
 			cbSecurity
 				.authenticate( data.email, data.currentPasswordConfirm )
 				.setPassword( data.newPassword )
 				.save();
+			js('Swal.fire({ position: "top-end", icon: "success", title: "Password Updated", showConfirmButton: false, timer: 3000 });');
 			data.append(
 				{
-					"changePasswordSuccess"  : true,
 					"currentPasswordConfirm" : "",
 					"newPassword"            : "",
-					"newPasswordConfirm"     : "",
-					"changePasswordError"    : []
+					"newPasswordConfirm"     : ""
 				},
 				true
 			);
 		} catch ( any e ) {
-			data.changePasswordError.append( e.message );
+			js('Swal.fire({ title: "Errors", html: "#encodeForJavaScript(e.message)#", icon: "error" });');
 		}
 	}
 

@@ -6,6 +6,7 @@
 	#view(
 		"wiredemos/showCode",
 		{
+			"codeIntro" : "/views/wiredemos/partials/codeIntro-editMyAccount.cfm",
 			"files" : [
 				"/views/wiredemos/editMyAccount.cfm",
 				"/wires/editMyAccount.cfc",

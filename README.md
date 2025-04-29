@@ -12,7 +12,7 @@
 > 
 > In this session we will explore one of the “things” you may have heard tossed around, CBWire! We will go a little deeper than a typical “Elevator Pitch” and discuss what CBWire is, what it can do, and end with a live coding demonstration of how easy it is to integrate into an existing ColdBox application while building our first wire. We will end with a Q & A and hopefully gain a few more CBWire fans!
 
-This repository contains a the CBWire demos used for this presentation and more.
+This repository contains the CBWire demos used for this presentation and more.
 
 ## Setup of Demo
 
@@ -20,7 +20,7 @@ This repository contains a the CBWire demos used for this presentation and more.
 
 Copy `.env.example` to `.env` in the root of the repository
 
-There are **not** any environment variables that need to be changed when copying `.env.example` to `.env`, However there are a few optional values you might want to change. Setting the `DEMO_USER_*` values will allow ColdBox to reset the primary demo user on every appinit
+There are **not** any environment variables that need to be changed when copying `.env.example` to `.env`, However there are a few optional values you might want to modify. Setting the `DEMO_USER_*` values will allow ColdBox to reset the primary demo user on every appinit
 
 ```
 # Demo User (ID=1) Info (will be reset on appinit. Remove or set to blank to disable)
@@ -33,40 +33,31 @@ DEMO_USER_TITLE=Baron
 
 ### 2. Start CommandBox and install ColdBox dependencies
 
-start CommandBox in the root of the repository
+Five commands to get going! Start CommandBox in the root of the repository, change into the `wwwroot` folder, install dependencies, go back to the root of the repository, and fire up the server!
 
 ```bash
 box
-```
-
-change into the `wwwroot` folder and install dependencies
-
-```bash
 cd wwwroot
 install
-```
-
-go back to root of repository
-
-```bash
 cd ..
-```
-
-### 3. Start the Server
-
-```bash
 server start
 ```
 
-## Features of the demo
+### Troubleshooting Tips
 
+- If the server is having trouble finding the SQLite Database or JDBC driver when started up, you can put the absolute path for:
+  -  SQLite Database: `DB_PATH` environment variable in `.env` replacing the relative path of `./DB/catchingWire.db` (Note: If you change the .env file make sure to restart commandbox to refresh the environment variables)
+  -  jars folder: `server.json` setting `app.libDirs` replacing the relative path of `./DB/jars/`
+
+## Features of the demo
+- Includes a SQLite database &  SQLite JDBC driver
+- between the `.env`, `server.json`, and `.cfconfig.json` files the lucee server should load the JDBC driver and create the SQLite datasource
 - Initial Modules Installed:
   - [QB](https://qb.ortusbooks.com/)
   - [Quick](https://quick.ortusbooks.com/)
   - [CBSecurity](https://coldbox-security.ortusbooks.com/)
   - [BCrypt](https://forgebox.io/view/BCrypt)
   - [ColdThumbs](https://forgebox.io/view/ColdThumbs)
-  - [cbMailServices](https://coldbox-mailservices.ortusbooks.com/)
   - [cbvalidation](https://coldbox-validation.ortusbooks.com/)
   - [CBWire (Of Course!)](https://cbwire.ortusbooks.com/)
 - When `ENVIRONMENT=development` you can automtically login using `COMMAND KEY + l` on mac and `WINDOWS KEY + l` on windows
@@ -83,7 +74,7 @@ server start
 
 Demo uses the [sqlite-jdbc driver found here](https://github.com/xerial/sqlite-jdbc) and is automatically added to the classpath of the server in the `server.json` configuration
 
-#### SQLite
+#### SQLite Tools
 
 A very useful, simple, and free tool for Mac users to interact directly with the SQLite DB is [DB Browser for SQLite](https://sqlitebrowser.org/)
 
@@ -105,9 +96,17 @@ CBWire uses Livewire.js and is essentially the CF port of Livewire. Once I was m
 
 Livewire includes alpine.js out of the box and adds some great features when your ready to dive into it deeper
 
+### [ColdThumbs](https://forgebox.io/view/ColdThumbs)
+
+I have to give a shout out to <a href="https://github.com/GaryStanton" target="_blank">Gary Stanton</a>, the create of ColdThumbs. I don't know him but I love ColdThumbs. I have used this module many times and it is extremely helpful. I use it to create and cache thumbnail images on the fly. If you want to see it in action copy your profile image to `/wwwroot/includes/images/profiles/1.jpg` and reload the page.
+
 ### [highlight.js](https://highlightjs.org/) 
 
 used for all the code syntax highlighting at the bottom of each CBWire demo page.
+
+### [AdminLTE Theme](https://adminlte.io/) 
+
+The open source admin dashboard & control panel theme used in this demo
 
 ## Acknowledgments
 
@@ -117,4 +116,4 @@ used for all the code syntax highlighting at the bottom of each CBWire demo page
 
 ### [Ortus Solutions](https://github.com/Ortus-Solutions), the creators of all things BOX!
 
-### [AdminLTE Theme](https://adminlte.io/) The open source admin dashboard & control panel theme used in this demo
+

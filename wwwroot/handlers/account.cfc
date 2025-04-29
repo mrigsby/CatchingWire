@@ -8,12 +8,13 @@ component extends="coldbox.system.EventHandler" secured {
 	}
 
 	function index( event, rc, prc ){
-
-
-		prc.layoutMeta = { pageTitle : "Edit My Account", breadCrumbs : [
-			{ Title : "Dashboard", Link : "/" },
-			{ Title : "My Account", active : true }
-		] };
+		prc.layoutDetails.append({
+			pageTitle : "Edit My Account", 
+			breadCrumbs : [
+				{ Title : "Dashboard", Link : "/" },
+				{ Title : "My Account", active : true }
+			]
+		} ,true );
 		event.setView( "account/myAccount" );
 	}
 

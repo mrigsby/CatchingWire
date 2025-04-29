@@ -1,4 +1,14 @@
 <cfoutput>
+	<cfscript>
+		param args.codeIntro = "";
+		param args.codeIntroTitle = "Let's Take a Deeper Look";
+		param args.files         = [];
+		// helper function to insert links in code explainer text easier
+		function scLink( linkurl ){
+			return '<a href="#linkurl#" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>';
+		}
+
+	</cfscript>
 	<button
 		class="btn btn-info mt-5"
 		type ="button"
@@ -11,6 +21,16 @@
 	</button>
 	<div class="collapse mt-3" id="collapseWireCode" style="">
 		<div class="card card-body">
+
+			<cfif len( args.codeIntro ) >
+				<h4 class="mt-3">
+					<span class="badge text-bg-info">
+						<i class="bi bi-person-raised-hand"></i> #args.codeIntroTitle#
+					</span>
+				</h4>
+				<cfinclude template="#args.codeIntro#" />
+			</cfif>
+
 			<cfloop index="currentIndex" item="currentItem" array="#args.files#">
 				<cfscript>
 				// set file type

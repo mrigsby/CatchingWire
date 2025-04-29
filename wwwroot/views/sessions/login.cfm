@@ -44,16 +44,28 @@
 			</small>
 		</cfif>
 
-		<!--begin::Row-->
 		<div class="row">
 			<div class="col-12">
 				<div class="d-grid gap-2">
 					<button type="submit" class="btn btn-primary">Sign In</button>
 				</div>
 			</div>
-			<!-- /.col -->
 		</div>
-		<!--end::Row-->
+
+		<cfif
+			( getSystemSetting( "ENVIRONMENT", "" ) EQ "development" )
+			AND isValid( "email", getSystemSetting( "DEMO_USER_EMAIL", "" ) )
+			AND len( getSystemSetting( "DEMO_USER_PASSWORD", "" ) ) >
+			<div class="row">
+				<div class="col-12">
+					<div class="alert alert-primary" role="alert" style="text-align: center; margin-top: 2rem;">
+						Environment: <code>DEVELOPMENT</code><br>
+						Press <code><cfif find("Macintosh", CGI.HTTP_USER_AGENT) >&##8984;<cfelse>WIN</cfif>+l</code> to automatically login
+					</div>
+				</div>
+			</div>
+		</cfif>
+
 	</form>
 
 	<p class="mt-3"><a href="/lost-password">I forgot my password</a></p>

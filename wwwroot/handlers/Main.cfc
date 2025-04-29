@@ -7,14 +7,19 @@ component extends="coldbox.system.EventHandler" secured {
 	}
 
 	function index( event, rc, prc ){
-		prc.layoutMeta = { pageTitle : "Dashboard", breadCrumbs : [
-			{ Title : "Home", Link : "/" },
-			{ Title : "Dashboard", active : true }
-		] };
+		prc.layoutDetails.append({
+			pageTitle : "Dashboard", 
+			breadCrumbs : [
+				{ Title : "Home", Link : "/" },
+				{ Title : "Dashboard", active : true }
+			]
+		} ,true );
 		event.setView( "main/index" );
 	}
 
 	function importDemoUsers( event, rc, prc ){
+		writeOutput( "<h3>This handler will import demo users from /DB/example_users.json but you need to remove or comment out the abort statement first!</h3>" );
+		abort;
 		var jsonDemoUsersFile = expandPath("../") & "DB/example_users.json";
 		if( !fileExists( jsonDemoUsersFile ) ) return "<h3>ERROR: example_users.json DOES NOT EXISTS IN THE 'DB' FOLDER</h3>";
 
@@ -68,22 +73,13 @@ component extends="coldbox.system.EventHandler" secured {
 	}
 
 	function onRequestStart( event, rc, prc ){
-
+		// set some layout defaults on each request
 		prc.layoutDetails = {
-			"pageTitle" 		: 	getSetting("companyName", "Catching Wire"),
-			"headCSSFiles"		:	[],
-			"headJSFiles"		:	[],
-			"footCSSFiles"		:	[],
-			"footJSFiles"		:	[],
-			"bodyClass"			:	"",
-			"addContainerClass"	:	"",
-			"showTitleBar"		:	true,
-			"showBreadCrumb"	:	true,
+			"pageTitle"			:	"",
 			"breadCrumbs"		:	[ { "label" : "Dashboard", "url" : "/", "active" : false } ],
 			"main_menu_active"	:	"dashboard",
 			"sub_menu_active"	:	""
 		};
-
 	}
 
 	function onException( event, rc, prc ){
