@@ -27,7 +27,6 @@
     },
     "installPaths":{
         "coldbox":"coldbox/",
-        "cbwire":"modules/cbwire/",
         "route-visualizer":"modules/route-visualizer/",
         "quick":"modules/quick/",
         "cbsecurity":"modules/cbsecurity/",
@@ -38,10 +37,11 @@
         "cbvalidation":"modules/cbvalidation/",
         "cbdebugger":"modules/cbdebugger/",
         "mementifier":"modules/mementifier/",
+        "cbcsrf":"modules/cbcsrf/",
+        "cbwire":"modules/cbwire/"
     },
     "dependencies":{
         "coldbox":"~7",
-        "cbwire":"~4",
         "quick":"^11.0.1",
         "cbsecurity":"^3.4.3+5",
         "qb":"~11",
@@ -50,5 +50,7 @@
         "cbmailservices":"^2.8.0+1",
         "cbvalidation":"^4.5.0+27",
         "mementifier":"^3",
+        "cbcsrf":"^3.2.0+1",
+        "cbwire":"be"
     }
 }

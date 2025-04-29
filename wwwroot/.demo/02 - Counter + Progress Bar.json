@@ -1,0 +1,32 @@
+{
+	"$schema": "https://demotime.elio.dev/demo-time.schema.json",
+	"title": "02. Counter + Progress Bar",
+	"description": "",
+	"demos": [
+		{
+			"title": "Introduction",
+			"steps": [
+				{ "action": "openSlide", "path": ".demo/slides/02-01.md" }
+			]
+		},
+		{
+			"title": "Open Demo URL",
+			"steps": [
+				{ "action": "openWebsite", "url": "http://127.0.0.1:8112/wiredemos/counter2", "openInVSCode": false }
+			]
+		},
+		{
+			"title": "Open Component (Model)",
+			"steps": [
+				{ "action": "highlight", "path": "wwwroot/wires/counter2.cfc", "position": "1:21" }
+			]
+		},
+		{
+			"title": "Open Template (View)",
+			"steps": [
+				{ "action": "highlight", "path": "wwwroot/wires/counter2.cfm", "position": "1:35" }
+			]
+		},
+
+	]
+}

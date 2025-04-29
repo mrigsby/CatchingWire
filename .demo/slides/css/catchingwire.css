@@ -46,6 +46,7 @@
 	h1 {
 		font-size: 34px;
 		font-weight: bold;
+		line-height: 42px;
 		color: var(--cbwire-gold);
 		display: block;
 		padding: 0.25em;
@@ -55,6 +56,7 @@
 	}
 	h2 {
 		font-size: 24px;
+		line-height: 32px;
 		font-weight: bold;
 		color: var(--demotime-color);
 		display: block;
@@ -65,6 +67,7 @@
 	}
 	h3 {
 		font-size: 18px;
+		line-height: 24px;
 		font-weight: bold;
 		color: var(--demotime-color);
 		display: block;
@@ -76,6 +79,7 @@
 	h4 {
 		font-size: 16px;
 		font-weight: bold;
+		line-height: 22px;
 		color: var(--demotime-color);
 		display: block;
 		padding: 0.25em;
@@ -159,6 +163,13 @@
 		font-size: 18px;
 		margin: 0;
 	}
+
+	code {
+		background: black;
+		border: 1px solid var(--cbwire-gold);
+		color: rgb(255, 0, 119);
+	}
+
 	pre {
 		width: 100%;
 		padding: 10px;
@@ -175,6 +186,29 @@
 		color: var(--demotime-color);
 		background: transparent;;
 	}
+	.spacer-10 { height: 10px; }
+	.spacer-20 { height: 20px; }
+	.spacer-30 { height: 30px; }
+	.spacer-40 { height: 40px; }
+	.spacer-50 { height: 50px; }
+	.spacer-60 { height: 60px; }
+	.spacer-70 { height: 70px; }
+	.spacer-80 { height: 80px; }
+	.spacer-90 { height: 90px; }
+	.spacer-100 { height: 100px; }
+	.spacer-110 { height: 110px; }
+	.spacer-120 { height: 120px; }
+	.spacer-130 { height: 130px; }
+	.spacer-140 { height: 140px; }
+	.spacer-150 { height: 150px; }
+	.spacer-175 { height: 175px; }
+	.spacer-200 { height: 200px; }
+	.spacer-225 { height: 225px; }
+	.spacer-250 { height: 250px; }
+	.spacer-275 { height: 275px; }
+	.spacer-300 { height: 300px; }
+
+
 
 	.slide_footer {
 		position: absolute;

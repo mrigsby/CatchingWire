@@ -1,0 +1,50 @@
+{
+	"$schema": "https://demotime.elio.dev/demo-time.schema.json",
+	"title": "06. Customer Table",
+	"description": "",
+	"demos": [
+		{
+			"title": "Introduction",
+			"steps": [
+				{ "action": "openSlide", "path": ".demo/slides/06-01.md" }
+			]
+		},
+		{
+			"title": "Open NON-WIRE URL",
+			"steps": [
+				{ "action": "openWebsite", "url": "http://127.0.0.1:8112/customers", "openInVSCode": false }
+			]
+		},
+		{
+			"title": "Open NON-WIRE View",
+			"steps": [
+				{ "action": "open", "path": "wwwroot/views/account/myAccount.cfm" }
+			]
+		},
+		{
+			"title": "Open NON-WIRE Handler",
+			"steps": [
+				{ "action": "open", "path": "wwwroot/handlers/account.cfc" }
+			]
+		},
+		{
+			"title": "Open WIRE URL",
+			"steps": [
+				{ "action": "openWebsite", "url": "http://127.0.0.1:8112/wiredemos/customerTable", "openInVSCode": false }
+			]
+		},
+		{
+			"title": "Open Component (Model)",
+			"steps": [
+				{ "action": "open", "path": "wwwroot/wires/customerTable.cfc" }
+			]
+		},
+		{
+			"title": "Open Template (View)",
+			"steps": [
+				{ "action": "open", "path": "wwwroot/wires/customerTable.cfm" }
+			]
+		},
+
+	]
+}

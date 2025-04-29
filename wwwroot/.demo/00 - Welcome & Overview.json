@@ -1,0 +1,29 @@
+{
+	"$schema": "https://demotime.elio.dev/demo-time.schema.json",
+	"title": "00. Welcome & Overview",
+	"description": "",
+	"demos": [
+		{
+			"title": "Welcome",
+			"steps": [
+				{ "action": "openSlide", "path": ".demo/slides/00-01.md" }
+			]
+		},
+		{
+			"title": "About The Demo",
+			"steps": [
+				{ "action": "openSlide", "path": ".demo/slides/00-02.md" }
+			]
+		},
+		{
+			"title": "Start CommandBox Server",
+			"steps": [
+				{ "action": "executeVSCodeCommand", "command": "workbench.action.togglePanel" },
+				{ "action": "executeTerminalCommand", "command": "box" },
+				{ "action": "executeTerminalCommand", "command": "server start" },
+				{ "action": "executeVSCodeCommand", "command": "workbench.action.togglePanel" }
+			]
+		}
+
+	]
+}

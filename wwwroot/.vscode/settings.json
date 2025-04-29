@@ -1,0 +1,30 @@
+{
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"cfml.mappings": [
+		{
+			"logicalPath": "/coldbox",
+			"directoryPath": "./coldbox",
+			"isPhysicalDirectoryPath" :false
+		},
+		{
+			"logicalPath": "/testbox",
+			"directoryPath": "./testbox",
+			"isPhysicalDirectoryPath" :false
+		}
+	],
+	"workbench.editor.showTabs": "multiple",
+	"workbench.activityBar.location": "default",
+	
+	"demoTime.showClock": true,
+	"demoTime.highlightBorderColor": "transparent",
+	"demoTime.highlightBackground": "rgba(19, 142, 151, 0.2)",
+	"demoTime.highlightOpacity": 0.5,
+	"demoTime.highlightBlur": 2,
+	"demoTime.highlightZoomEnabled": false,
+	"demoTime.previousEnabled": true,
+
+	"[cfml]": {
+		"editor.defaultFormatter": "markdrew.cfml-formatter"
+	},
+	"workbench.statusBar.visible": true
+}

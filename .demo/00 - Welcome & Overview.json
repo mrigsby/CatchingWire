@@ -20,7 +20,8 @@
 			"steps": [
 				{ "action": "executeVSCodeCommand", "command": "workbench.action.togglePanel" },
 				{ "action": "executeTerminalCommand", "command": "box" },
-				{ "action": "executeTerminalCommand", "command": "server start" }
+				{ "action": "executeTerminalCommand", "command": "server start" },
+				{ "action": "executeVSCodeCommand", "command": "workbench.action.togglePanel" }
 			]
 		}
 

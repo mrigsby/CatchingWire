@@ -2,11 +2,17 @@
 	{{#if metadata.logo-small}}
 		<div class="slide_logo_small"></div>
 	{{/if}}
-	<h1 class="slide_title " style="text-align: center; display: block;">
-		{{#if metadata.title}}{{metadata.title}}{{else}}Catching 🔥 Wire{{/if}}
-	</h1>
-	<div class="slide_content">
-
+	{{#if metadata.title}}
+		<h1 class="slide_title " style="text-align: center; display: block;">
+			{{metadata.title}}
+		</h1>
+	{{/if}}
+	<div class="slide_content" style="
+		{{#if metadata.padding-top}}padding-top: {{metadata.padding-top}};{{/if}}
+		{{#if metadata.padding-top}}padding-bottom: {{metadata.padding-bottom}};{{/if}}
+		{{#if metadata.padding-left}}padding-left: {{metadata.padding-left}};{{/if}}
+		{{#if metadata.padding-right}}padding-right: {{metadata.padding-right}};{{/if}}
+	" >
 		{{{content}}}
 	</div>
 	<footer class="slide_footer">
