@@ -33,12 +33,12 @@
         "qb":"modules/qb/",
         "BCrypt":"modules/BCrypt/",
         "ColdThumbs":"modules/ColdThumbs/",
-        "cbmailservices":"modules/cbmailservices/",
         "cbvalidation":"modules/cbvalidation/",
         "cbdebugger":"modules/cbdebugger/",
         "mementifier":"modules/mementifier/",
         "cbcsrf":"modules/cbcsrf/",
-        "cbwire":"modules/cbwire/"
+        "cbwire":"modules/cbwire/",
+        "cbmailservices":"modules/cbmailservices/"
     },
     "dependencies":{
         "coldbox":"~7",
@@ -47,10 +47,10 @@
         "qb":"~11",
         "BCrypt":"^3.1.0+4",
         "ColdThumbs":"^2.2.0",
-        "cbmailservices":"^2.8.0+1",
         "cbvalidation":"^4.5.0+27",
         "mementifier":"^3",
         "cbcsrf":"^3.2.0+1",
-        "cbwire":"be"
+        "cbwire":"be",
+        "cbmailservices":"^2.9.0+2"
     }
 }
