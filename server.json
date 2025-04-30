@@ -1,11 +1,14 @@
 {
     "name":"catchingWire",
+    "cfconfig":{
+        "file":"wwwroot/.cfconfig.json"
+    },
     "app":{
         "cfengine":"lucee@5",
-        "libDirs":"./DB/jars/"
+        "libDirs":"DB/jars/"
     },
     "web":{
-        "webroot":"./wwwroot",
+        "webroot":"wwwroot",
         "rewrites":{
             "enable":"true"
         },
