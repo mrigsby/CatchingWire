@@ -165,9 +165,9 @@
 	}
 
 	code {
-		background: black;
-		border: 1px solid var(--cbwire-gold);
-		color: rgb(255, 0, 119);
+		background: transparent !important;
+		border: 0 solid transparent !important;
+		color: rgb(255, 0, 115);
 	}
 
 	pre {

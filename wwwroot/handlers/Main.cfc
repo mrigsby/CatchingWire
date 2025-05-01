@@ -8,7 +8,7 @@ component extends="coldbox.system.EventHandler" secured {
 
 	function index( event, rc, prc ){
 		prc.layoutDetails.append({
-			pageTitle : "Dashboard", 
+			pageTitle : "Dashboard",
 			breadCrumbs : [
 				{ Title : "Home", Link : "/" },
 				{ Title : "Dashboard", active : true }
@@ -25,7 +25,7 @@ component extends="coldbox.system.EventHandler" secured {
 
 		var demoUsers = deserializeJSON( fileRead( jsonDemoUsersFile ) );
 		if( !isArray( demoUsers ) ) return "<h3>ERROR: example_users.json IS NOT AN ARRAY</h3>";
-		
+
 		// writeDump( demoUsers )
 		// return "";
 
@@ -44,24 +44,12 @@ component extends="coldbox.system.EventHandler" secured {
 	 */
 
 	function onAppInit( event, rc, prc ){
-		// set demo user (id = 1) if exists in .env or system settings
+		// set demo user (id = 1) to settings in .env or system settings
 		if( len( getSystemSetting( "DEMO_USER_EMAIL", "" ) ) && len( getSystemSetting( "DEMO_USER_PASSWORD", "" ) ) ){
-			var oUser = getInstance( "User" ).firstOrNew( { "id": 1 } );
-			oUser.setAccountType( "admin" )
-				.setActive( true )
-				.setEmail( getSystemSetting( "DEMO_USER_EMAIL" ) )
-				.setPassword( getSystemSetting( "DEMO_USER_PASSWORD" ) )
-				.setFname( getSystemSetting( "DEMO_USER_FIRST_NAME", "" ) )
-				.setLname( getSystemSetting( "DEMO_USER_LAST_NAME", "" ) )
-				.setTitle( getSystemSetting( "DEMO_USER_TITLE", "" ) )
-				.setPermissions( [ "admin", "user" ] )
-				.setRoles( [ "admin" ] )
-				.save();
-			// verify ID is 1
-			if( oUser.getID() != 1 ){
-				oUser.setID( 1 ).save();
+
+
+
 			}
-		}
 		application.cbController.setSetting(
 			"profilePicPath",
 			application.cbController.getSetting("APPLICATIONPATH") & "includes/images/profiles/"
