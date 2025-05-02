@@ -13,9 +13,9 @@ component extends="cbwire.models.Component" {
 		if ( data[ incrementCounter ] > 100 ) data[ incrementCounter ] = 100;
 	}
 
-	function decrement( incrementCounter = "counter1", incrementValue = 1 ){
-		data[ incrementCounter ] -= incrementValue;
-		if ( data[ incrementCounter ] < 0 ) data[ incrementCounter ] = 0;
+	function decrement( decrementCounter = "counter1", decrementValue = 1 ){
+		data[ decrementCounter ] -= decrementValue;
+		if ( data[ decrementCounter ] < 0 ) data[ decrementCounter ] = 0;
 	}
 
 }

@@ -4,8 +4,8 @@ component extends="cbwire.models.Component" {
 		"page"               : 1,
 		"sort"               : "asc",
 		"sort_col"           : "lname",
-		"show_inactive"      : 0,
-		"edit_customer_link" : ""
+		"edit_customer_link" : "",
+		"show_inactive"      : 0
 	};
 
 	function getCustomers(){

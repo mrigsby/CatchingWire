@@ -4,7 +4,6 @@ component extends="cbwire.models.Component" {
 		"page"               : 1,
 		"sort"               : "asc",
 		"sort_col"           : "lname",
-		"show_inactive"      : true,
 		"edit_customer_link" : ""
 	};
 
@@ -12,9 +11,6 @@ component extends="cbwire.models.Component" {
 		return getInstance( "QueryBuilder@qb" )
 			.table( "users" )
 			.where( "accountType", "user" )
-			.when( !data.show_inactive, function( q ){
-				q.andWhere( "active", 1 );
-			} )
 			.orderBy( data.sort_col, data.sort )
 			.paginate( data.page );
 	}
@@ -26,10 +22,6 @@ component extends="cbwire.models.Component" {
 	function setSort( sort, sort_col ){
 		data.sort     = sort;
 		data.sort_col = sort_col;
-	}
-
-	function setShowInactive( showInactive ){
-		data.show_inactive = showInactive;
 	}
 
 	function onMount( params, event, rc, prc ){

@@ -65,7 +65,7 @@ component extends="cbwire.models.Component" {
 	}
 
 	function onMount( params, event, rc, prc ){
-		var oUser = cbSecurity.getUser();
+		var oUser = cbSecurity.getUser(); // could use prc.oCurrentUser
 		data.append(
 			{
 				"id"          : oUser.getId(),

@@ -10,12 +10,6 @@
 			]
 		},
 		{
-			"title": "Open WIRE URL",
-			"steps": [
-				{ "action": "openWebsite", "url": "http://127.0.0.1:8112/wiredemos/customerTable2", "openInVSCode": false }
-			]
-		},
-		{
 			"title": "Open Component (Model)",
 			"steps": [
 				{ "action": "open", "path": "wwwroot/wires/customerTable2.cfc" }
@@ -27,6 +21,12 @@
 				{ "action": "open", "path": "wwwroot/wires/customerTable2.cfm" }
 			]
 		},
+		{
+			"title": "Open WIRE URL",
+			"steps": [
+				{ "action": "openWebsite", "url": "http://127.0.0.1:8112/wiredemos/customerTable2", "openInVSCode": false }
+			]
+		}
 
 	]
 }
