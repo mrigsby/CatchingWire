@@ -12,6 +12,7 @@
 		{
 			"title": "About The Demo",
 			"steps": [
+				{ "action": "closeAll" },
 				{ "action": "openSlide", "path": ".demo/slides/00-02.md" }
 			]
 		},

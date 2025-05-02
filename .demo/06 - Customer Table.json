@@ -6,66 +6,44 @@
     {
       "title": "Introduction",
       "steps": [
-        {
-          "action": "openSlide",
-          "path": ".demo/slides/06-01.md"
-        }
+				{ "action": "closeAll" },
+        { "action": "openSlide", "path": ".demo/slides/06-01.md" }
       ]
     },
     {
       "title": "Open NON-WIRE View",
       "steps": [
-        {
-          "action": "open",
-          "path": "wwwroot/views/customers/allCustomers.cfm"
-        }
+        { "action": "open", "path": "wwwroot/views/customers/allCustomers.cfm" }
       ]
     },
     {
       "title": "Open NON-WIRE Handler",
       "steps": [
-        {
-          "action": "open",
-          "path": "wwwroot/handlers/customers.cfc"
-        }
+        { "action": "open", "path": "wwwroot/handlers/customers.cfc" }
       ]
     },
     {
       "title": "Open NON-WIRE URL",
       "steps": [
-        {
-          "action": "openWebsite",
-          "url": "http://127.0.0.1:8112/customers",
-          "openInVSCode": false
-        }
+        { "action": "openWebsite", "url": "http://127.0.0.1:8112/customers", "openInVSCode": false }
       ]
     },
     {
       "title": "Open Component (Model)",
       "steps": [
-        {
-          "action": "open",
-          "path": "wwwroot/wires/customerTable.cfc"
-        }
+        { "action": "open", "path": "wwwroot/wires/customerTable.cfc" }
       ]
     },
     {
       "title": "Open Template (View)",
       "steps": [
-        {
-          "action": "open",
-          "path": "wwwroot/wires/customerTable.cfm"
-        }
+        { "action": "open", "path": "wwwroot/wires/customerTable.cfm" }
       ]
     },
     {
       "title": "Open WIRE URL",
       "steps": [
-        {
-          "action": "openWebsite",
-          "url": "http://127.0.0.1:8112/wiredemos/customerTable",
-          "openInVSCode": false
-        }
+        { "action": "openWebsite", "url": "http://127.0.0.1:8112/wiredemos/customerTable", "openInVSCode": false }
       ]
     }
   ]

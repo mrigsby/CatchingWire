@@ -10,12 +10,6 @@
 			]
 		},
 		{
-			"title": "Open Demo URL",
-			"steps": [
-				{ "action": "openWebsite", "url": "http://127.0.0.1:8112/wiredemos/counter2", "openInVSCode": false }
-			]
-		},
-		{
 			"title": "Open Component (Model)",
 			"steps": [
 				{ "action": "highlight", "path": "wwwroot/wires/counter2.cfc", "position": "1:21" }
@@ -27,6 +21,12 @@
 				{ "action": "highlight", "path": "wwwroot/wires/counter2.cfm", "position": "1:35" }
 			]
 		},
+		{
+			"title": "Open Demo URL",
+			"steps": [
+				{ "action": "openWebsite", "url": "http://127.0.0.1:8112/wiredemos/counter2", "openInVSCode": false }
+			]
+		}
 
 	]
 }

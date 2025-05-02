@@ -6,6 +6,7 @@
 		{
 			"title": "Introduction",
 			"steps": [
+				{ "action": "closeAll" },
 				{ "action": "openSlide", "path": ".demo/slides/07-01.md" }
 			]
 		},

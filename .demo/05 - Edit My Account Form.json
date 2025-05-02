@@ -6,13 +6,8 @@
 		{
 			"title": "Introduction",
 			"steps": [
+				{ "action": "closeAll" },
 				{ "action": "openSlide", "path": ".demo/slides/05-01.md" }
-			]
-		},
-		{
-			"title": "Open Demo URL",
-			"steps": [
-				{ "action": "openWebsite", "url": "http://127.0.0.1:8112/wiredemos/editMyAccount", "openInVSCode": false }
 			]
 		},
 		{
@@ -27,6 +22,12 @@
 				{ "action": "highlight", "path": "wwwroot/wires/editMyAccount.cfm", "position": "1:97" }
 			]
 		},
+		{
+			"title": "Open Demo URL",
+			"steps": [
+				{ "action": "openWebsite", "url": "http://127.0.0.1:8112/wiredemos/editMyAccount", "openInVSCode": false }
+			]
+		}
 
 	]
 }

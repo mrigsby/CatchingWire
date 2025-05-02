@@ -6,13 +6,8 @@
 		{
 			"title": "Introduction",
 			"steps": [
+				{ "action": "closeAll" },
 				{ "action": "openSlide", "path": ".demo/slides/04-01.md" }
-			]
-		},
-		{
-			"title": "Open Demo URL",
-			"steps": [
-				{ "action": "openWebsite", "url": "http://127.0.0.1:8112/wiredemos/counter4", "openInVSCode": false }
 			]
 		},
 		{
@@ -28,9 +23,15 @@
 			]
 		},
 		{
-			"title": "Open View",
+			"title": "Open ColdBox View",
 			"steps": [
 				{ "action": "highlight", "path": "wwwroot/views/wiredemos/counter4.cfm", "position": "1:49" }
+			]
+		},
+		{
+			"title": "Open Demo URL",
+			"steps": [
+				{ "action": "openWebsite", "url": "http://127.0.0.1:8112/wiredemos/counter4", "openInVSCode": false }
 			]
 		}
 
