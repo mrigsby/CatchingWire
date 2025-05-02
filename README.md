@@ -64,6 +64,7 @@ server start
 - [Uses the AdminLTE Bootstrap open source admin dashboard & control panel theme](https://adminlte.io/)
 - Contains multiple CBWire demos covering many features of CBWire
 - Contains a `.demo` folder with demos for use with [Demo Time VSCode Extension](https://demotime.elio.dev/)
+  - I was first introduced to DemoTime from Modernize or Die >>> Demo Time - [VSCode Hint Tip and Trick of the Week - 12/31/24 - Episode 226](https://www.youtube.com/watch?v=urY943uk4_k)
 
 *Side Note: this is a basic stack I like to start with on projects to get jump started and add or remove from there.*
 
